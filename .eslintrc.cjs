@@ -14,5 +14,13 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'no-restricted-properties': [
+      'warn',
+      {
+        object: ['ímport']['meta'],
+        property: 'env',
+        message: 'Use `src/env.ts` instead of `import.meta.env`'
+      }
+    ]
   },
 }
